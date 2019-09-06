@@ -71,23 +71,19 @@ def setup_logging():
                         format=logformat, datefmt="%Y-%m-%d %H:%M:%S")
 
 
-def main(args):
-    """Main entry point allowing external calls
-
-    Args:
-      args ([str]): command line parameter list
-    """
-    args = parse_args(args)
+def main():
+    """Main entry point allowing external calls"""
     setup_logging()
     _logger.debug("Starting crazy calculations...")
     print(f"Launching skeleton version {skeleton.__version__}...")
+    print("PROUT !!!")
     _logger.info("Script ends here")
 
 
 def run():
     """Entry point for console_scripts
     """
-    main(sys.argv[1:])
+    main()
 
 
 if __name__ == "__main__":
