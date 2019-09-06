@@ -19,6 +19,7 @@ import argparse
 import sys
 import logging
 
+import skeleton
 from skeleton import __version__
 
 __author__ = "Frédéric CORNU"
@@ -101,7 +102,7 @@ def main(args):
     args = parse_args(args)
     setup_logging(args.loglevel)
     _logger.debug("Starting crazy calculations...")
-    print("The {}-th Fibonacci number is {}".format(args.n, fib(args.n)))
+    print(f"Launching skeleton version {skeleton.__version__}...")
     _logger.info("Script ends here")
 
 
