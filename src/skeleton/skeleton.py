@@ -76,7 +76,7 @@ def main():
     setup_logging()
     _logger.debug("Starting crazy calculations...")
     print(f"Launching skeleton version {skeleton.__version__}...")
-    print("PROUT !!!")
+    print("3 tits ! Awesome !!!")
     _logger.info("Script ends here")
 
 

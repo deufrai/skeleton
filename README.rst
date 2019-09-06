@@ -3,17 +3,16 @@ skeleton
 ========
 
 
-Add a short description here!
+Test project for pyscaffold
 
 
 Description
 ===========
 
-A longer description of your project goes here...
+Just getting my hands around this
 
 
 Note
 ====
 
-This project has been set up using PyScaffold 3.2.1. For details and usage
-information on PyScaffold see https://pyscaffold.org/.
+Hope this goes as planned
