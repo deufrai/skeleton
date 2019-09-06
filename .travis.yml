@@ -10,8 +10,4 @@ before_install:
     - pip install pylint
 
 script:
-  - pylint src/skeleton
-  - python setup.py test
-  - python setup.py install
-  - skeleton --version
-  - skeleton
+  - ci/full_checks.sh
