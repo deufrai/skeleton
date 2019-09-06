@@ -55,41 +55,19 @@ def parse_args(args):
       :obj:`argparse.Namespace`: command line parameters namespace
     """
     parser = argparse.ArgumentParser(
-        description="Just a Fibonacci demonstration")
+        description="Skeleton test")
     parser.add_argument(
         "--version",
         action="version",
-        version="skeleton {ver}".format(ver=__version__))
-    parser.add_argument(
-        dest="n",
-        help="n-th Fibonacci number",
-        type=int,
-        metavar="INT")
-    parser.add_argument(
-        "-v",
-        "--verbose",
-        dest="loglevel",
-        help="set loglevel to INFO",
-        action="store_const",
-        const=logging.INFO)
-    parser.add_argument(
-        "-vv",
-        "--very-verbose",
-        dest="loglevel",
-        help="set loglevel to DEBUG",
-        action="store_const",
-        const=logging.DEBUG)
+        version="skeleton v{ver}".format(ver=__version__))
+
     return parser.parse_args(args)
 
 
-def setup_logging(loglevel):
-    """Setup basic logging
-
-    Args:
-      loglevel (int): minimum loglevel for emitting messages
-    """
+def setup_logging():
+    """Setup basic logging"""
     logformat = "[%(asctime)s] %(levelname)s:%(name)s:%(message)s"
-    logging.basicConfig(level=loglevel, stream=sys.stdout,
+    logging.basicConfig(level=logging.DEBUG, stream=sys.stdout,
                         format=logformat, datefmt="%Y-%m-%d %H:%M:%S")
 
 
@@ -100,7 +78,7 @@ def main(args):
       args ([str]): command line parameter list
     """
     args = parse_args(args)
-    setup_logging(args.loglevel)
+    setup_logging()
     _logger.debug("Starting crazy calculations...")
     print(f"Launching skeleton version {skeleton.__version__}...")
     _logger.info("Script ends here")
