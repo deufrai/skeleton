@@ -16,6 +16,6 @@
 # scipy==1.0
 #
 PyScaffold==3.2.1
-pytest==5.1.2
+pytest==9.0.3
 coverage==4.5.4
 
